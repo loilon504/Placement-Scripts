@@ -1,0 +1,29 @@
+# download data.zip
+pip install gdown
+gdown https://drive.google.com/uc?id=1WIhOejwrVakBmPzGeFasqg-m4W8iacEz
+
+# download UShER
+git clone https://github.com/yatisht/usher.git
+cd usher/install
+# conda env create -f environment.yml
+# conda activate usher
+cd ..
+mkdir build
+cd build
+wget https://github.com/oneapi-src/oneTBB/archive/2019_U9.tar.gz
+tar -xvzf 2019_U9.tar.gz
+cmake  -DTBB_DIR=${PWD}/oneTBB-2019_U9  -DCMAKE_PREFIX_PATH=${PWD}/oneTBB-2019_U9/cmake ..
+make -j
+cd ..
+#download faToVcf
+rsync -aP rsync://hgdownload.soe.ucsc.edu/genome/admin/exe/linux.x86_64/faToVcf .
+chmod +x faToVcf
+mv faToVcf scripts/
+
+# download anaconda
+curl -O https://repo.anaconda.com/archive/Anaconda3-<INSTALLER_VERSION>-Linux-x86_64.sh
+bash Anaconda3-<INSTALLER_VERSION>-Linux-x86_64.sh
+export PATH="/path/to/anaconda/bin:$PATH"
+
+# download libzip
+conda install -c conda-forge libzip
