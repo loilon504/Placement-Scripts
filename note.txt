@@ -30,3 +30,10 @@ export PATH="/path/to/anaconda/bin:$PATH"
 
 # download libzip
 conda install -c conda-forge libzip
+
+# HPC command
+bhosts -w: Xem status của các máy fit
+bjobs -u all: Xem tất cả các jobs
+df -m: Xem dung lượng trên hệ thống
+du -h: Xem dung lượng của file hoặc thư mục
+top: Task Manager Linux
