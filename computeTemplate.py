@@ -153,7 +153,7 @@ for i in [200, 500, 1000, 2000, 5000, 10000]:
 
     # print log
     if type[1] == "pla": print("Placement-" + str(i))
-    if type[2] == "ush": print("Usher-" + str(i))
+    if type[1] == "ush": print("Usher-" + str(i))
     print("Score:", score[i])
     print("Time:", time[i])
     print("Count:", count[i])
