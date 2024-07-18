@@ -1,5 +1,6 @@
 # cmake mpboot
 cmake ../source -DIQTREE_FLAGS=avx -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++
+change <filesystem> to <experimental/filesystem>
 
 # download data.zip
 pip install gdown
