@@ -38,3 +38,5 @@ bjobs -u all: Xem tất cả các jobs
 df -m: Xem dung lượng trên hệ thống
 du -h: Xem dung lượng của file hoặc thư mục
 top: Task Manager Linux
+bjobs -l: Xem info job
+bjobs -p: Xem status job
