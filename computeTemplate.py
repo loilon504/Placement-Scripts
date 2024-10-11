@@ -35,7 +35,7 @@ def getRealTime(line):
             else:
                 if state == 2: cntDecimal *= 10
                 tmpSecond = tmpSecond * 10 + int(t)
-    return tmpMinute * 60 + tmpSecond / cntDecimal
+    return 1.0 * tmpMinute * 60 + 1.0 * tmpSecond / cntDecimal
 
 def getFloat(line):
     tmpFloat = 0
@@ -48,7 +48,7 @@ def getFloat(line):
         if t.isdigit():
             if ok == True: cntDecimal *= 10
             tmpFloat = tmpFloat * 10 + int(t)
-    return tmpFloat / cntDecimal
+    return 1.0 * tmpFloat / cntDecimal
 
 
 def init():
